@@ -1,0 +1,29 @@
+<h1 class="d-flex justify-content-center align-items-center">Write what ever shit u want</h1>
+
+
+
+<div class="container">
+<% @posts.each do |post| %>
+    <div>
+
+    <div class="card" style="width: 18rem;">
+  
+  <div class="card-body">
+
+    <h5 class="card-title"><%=post.title%></h5>
+    <div class="border-top my-3"></div>
+
+    <p class="card-text text-truncate"><%=post.body%></p>
+
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'show', post_path(post) %>
+    <%= link_to 'create',new_post_path(post) %>
+
+  </div>
+
+</div>
+
+    </div>
+  <div class="border-top my-3"></div>
+<% end %>
+</div>
